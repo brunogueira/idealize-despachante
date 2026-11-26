@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Despachante Idealize | Suzano - SP</title>
+<meta name="description" content="Despachante credenciado em Suzano. Transferência, licenciamento, ATPV-e, placas, modificação veicular e regularização. Preço justo e pagamento em até 21x.">
+<meta name="theme-color" content="#f5f4f0">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Despachante Idealize | Suzano - SP">
+<meta property="og:description" content="Transferência, licenciamento, ATPV-e, placas e mais. Preço justo e até 21x no cartão.">
+<!-- Depois de publicar, troque "assets/og.png" pelo endereço completo (ex.: https://seudominio.com.br/assets/og.png) para a prévia aparecer no WhatsApp -->
+<meta property="og:image" content="assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* ============ tokens ============ */
+:root{
+  --paper:#f5f4f0; --paper-2:#eceae3; --card:#fff;
+  --ink:#0b1230; --ink-2:#2b3350; --muted:#6b7089; --faint:#9a9eb0;
+  --line:rgba(11,18,48,.09); --line-2:rgba(11,18,48,.16);
+  --blue:#1f45d0; --sky:#58b8ee; --wa:#1faa59; --wa-d:#178a48;
+  --sans:"Geist",system-ui,sans-serif; --serif:"Instrument Serif",Georgia,serif; --mono:"Geist Mono",ui-monospace,monospace;
+  /* curvas do Emil */
+  --ease-out:cubic-bezier(.23,1,.32,1); --ease-in-out:cubic-bezier(.77,0,.175,1); --ease-drawer:cubic-bezier(.32,.72,0,1);
+  --gutter:clamp(20px,4vw,48px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.55;font-size:16px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+/* grão de papel: estático, não anima */
+body::before{content:"";position:fixed;inset:0;z-index:100;pointer-events:none;opacity:.05;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+svg{display:block}
+::selection{background:var(--ink);color:var(--paper)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--gutter)}
+.wrap>*,.hero-grid>*,.sec-head>*,.svc-grid>*,.atpv-grid>*,.final-row>*,.contact-card>*{min-width:0}
+h1,h2,h3{font-weight:500;letter-spacing:-.035em;line-height:1;text-wrap:balance}
+p{text-wrap:pretty}
+em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+
+/* ============ botões ============ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:54px;padding:0 26px;border-radius:999px;border:0;cursor:pointer;font-weight:500;font-size:15.5px;letter-spacing:-.01em;white-space:nowrap;
+  transition:transform 160ms var(--ease-out),background-color 200ms ease,color 200ms ease,border-color 200ms ease}
+.btn:active{transform:scale(.97)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line-2)}
+.btn-paper{background:var(--paper);color:var(--ink)}
+.btn .arr{transition:transform 200ms var(--ease-out)}
+.link{display:inline-flex;align-items:center;gap:8px;font-weight:500;color:var(--ink);padding:6px 0;border-bottom:1px solid var(--line-2);transition:border-color 200ms ease}
+.link svg{width:15px;height:15px;transition:transform 200ms var(--ease-out)}
+@media (hover:hover) and (pointer:fine){
+  .btn-ink:hover{background:var(--blue)}
+  .btn-wa:hover{background:var(--wa-d)}
+  .btn-ghost:hover{box-shadow:inset 0 0 0 1px var(--ink)}
+  .btn-paper:hover{background:#fff}
+  .btn:hover .arr{transform:translateX(3px)}
+  .link:hover{border-color:var(--ink)}
+  .link:hover svg{transform:translateX(3px)}
+}
+
+/* ============ logo ============ */
+.brand{display:flex;align-items:center;gap:10px}
+.brand-mark{width:36px;height:36px;flex:none}
+.brand-word{font-family:Montserrat,sans-serif;line-height:1;display:flex;flex-direction:column}
+.brand-word small{font-size:9px;font-weight:700;letter-spacing:.34em;color:var(--ink-2)}
+.brand-word b{font-size:20px;font-weight:800;letter-spacing:.01em;margin-top:2px}
+.on-ink .brand-word small{color:rgba(245,244,240,.55)}
+.on-ink .brand-word b{color:var(--paper)}
+
+/* ============ header ============ */
+header{position:sticky;top:0;z-index:40;transition:background-color 300ms ease,box-shadow 300ms ease}
+header.scrolled{background:rgba(245,244,240,.86);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);box-shadow:0 1px 0 var(--line)}
+header .wrap{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+nav{display:flex;gap:4px}
+nav a{font-size:14.5px;color:var(--ink-2);padding:8px 14px;border-radius:999px;transition:background-color 200ms ease,color 200ms ease}
+@media (hover:hover) and (pointer:fine){nav a:hover{background:rgba(11,18,48,.05);color:var(--ink)}}
+header .btn{height:42px;padding:0 18px;font-size:14px}
+
+/* ============ revelação (uma entrada por bloco) ============ */
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .06em .1em;margin:0 -.06em -.1em}
+.js .w>span{display:inline-block;transform:translateY(108%);transition:transform 1000ms var(--ease-out);transition-delay:var(--d,0ms)}
+.js .in .w>span{transform:none}
+.js [data-r]{opacity:0;transform:translateY(var(--y,14px));transition:opacity 700ms var(--ease-out),transform 900ms var(--ease-out);transition-delay:var(--d,0ms)}
+.js [data-r="deco"]{--y:0px}
+.js .in [data-r],.js [data-r].in{opacity:1;transform:none}
+
+/* ============ hero ============ */
+.hero{padding:clamp(40px,7vw,96px) 0 0}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:center}
+.eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:clamp(24px,3vw,40px)}
+.eyebrow i{width:28px;height:1px;background:var(--ink)}
+.hero h1{font-size:clamp(50px,7.6vw,104px);line-height:.94;letter-spacing:-.05em}
+.hero h1 em{color:var(--blue);letter-spacing:-.02em}
+.hero .lead{font-size:clamp(17px,1.4vw,19px);color:var(--ink-2);max-width:500px;margin-top:clamp(24px,3vw,36px)}
+.hero .ctas{display:flex;align-items:center;gap:24px;margin-top:36px;flex-wrap:wrap}
+
+/* ficha de orçamento */
+.ficha{background:var(--card);border-radius:24px;padding:8px;box-shadow:0 1px 0 rgba(11,18,48,.04),0 1px 2px rgba(11,18,48,.04),0 24px 48px -24px rgba(11,18,48,.22),0 0 0 1px var(--line)}
+.ficha-h{display:flex;justify-content:space-between;align-items:center;padding:14px 16px 12px}
+.ficha-body{border-radius:18px;background:var(--paper);padding:6px 20px 20px}
+.field{display:grid;grid-template-columns:28px 1fr;gap:10px;padding:16px 0;border-bottom:1px dashed var(--line-2)}
+.field:last-of-type{border-bottom:0}
+.field>.mono:first-child{padding-top:2px;color:var(--faint)}
+.field-l{margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:inline-flex;align-items:center;gap:8px;height:36px;padding:0 14px 0 10px;border-radius:999px;border:0;background:var(--card);box-shadow:inset 0 0 0 1px var(--line-2);font-size:14px;color:var(--ink-2);cursor:pointer;
+  transition:transform 160ms var(--ease-out),background-color 200ms ease,color 200ms ease,box-shadow 200ms ease}
+.chip::before{content:"";width:12px;height:12px;border-radius:50%;box-shadow:inset 0 0 0 1px var(--line-2);transition:box-shadow 200ms var(--ease-out),background-color 200ms ease}
+.chip:active{transform:scale(.97)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);box-shadow:none}
+.chip[aria-pressed="true"]::before{background:var(--paper);box-shadow:inset 0 0 0 3.5px var(--sky)}
+@media (hover:hover) and (pointer:fine){.chip[aria-pressed="false"]:hover{box-shadow:inset 0 0 0 1px var(--ink-2)}}
+.q-name{font-size:14px;color:var(--ink-2)}
+.q-val{display:block;font-size:clamp(44px,4.4vw,60px);font-weight:500;letter-spacing:-.05em;line-height:1.05;margin:2px 0 4px;will-change:transform}
+.q-val small{font-size:.38em;font-weight:500;letter-spacing:-.01em;margin-right:6px;vertical-align:.95em}
+.q-val.word{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.02em;font-size:clamp(38px,3.6vw,50px)}
+.q-note{font-size:13px;color:var(--muted)}
+.ficha .btn{width:100%;margin-top:8px;height:56px}
+.ficha-f{text-align:center;padding:12px 0 6px;font-size:12.5px;color:var(--muted)}
+
+/* barra de fatos */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(48px,6vw,80px);border-top:1px solid var(--line-2)}
+.fact{padding:22px 24px 26px 0;border-right:1px solid var(--line)}
+.fact+.fact{padding-left:24px}
+.fact:last-child{border-right:0}
+.fact b{display:block;font-size:clamp(26px,2.6vw,36px);font-weight:500;letter-spacing:-.04em;margin:10px 0 2px}
+.fact span{font-size:13.5px;color:var(--muted)}
+
+/* ============ seções ============ */
+.section{padding:clamp(72px,8vw,120px) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);column-gap:var(--gutter);row-gap:22px;align-items:end;margin-bottom:clamp(32px,4vw,56px)}
+.sec-head>div:not(.sec-idx){display:contents}
+.sec-idx{grid-column:1/-1;display:flex;align-items:center;gap:10px}
+.sec-idx::before{content:"";width:28px;height:1px;background:currentColor;opacity:.6}
+.sec-idx b{color:var(--ink);font-weight:500}
+.sec-head h2{font-size:clamp(34px,4.2vw,62px);line-height:1;letter-spacing:-.04em;max-width:16ch}
+.sec-head h2 em{color:var(--blue)}
+.sec-head .sub{font-size:17px;color:var(--ink-2);max-width:420px;margin:0 !important;justify-self:end;padding-bottom:6px}
+
+/* serviços */
+.svc-grid{display:block}
+.svc-note{font-size:14px;color:var(--muted);max-width:220px}
+.tabs{overflow-x:auto;scrollbar-width:none;margin-bottom:20px}
+.tabs::-webkit-scrollbar{display:none}
+.tabs-inner{position:relative;display:flex;width:100%;gap:4px;padding:4px;border-radius:999px;background:var(--paper-2)}
+.tab{flex:1 1 0;justify-content:center;display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px;border-radius:999px;border:0;background:transparent;color:var(--ink-2);font-size:14.5px;cursor:pointer;white-space:nowrap;transition:transform 160ms var(--ease-out)}
+.tab:active{transform:scale(.97)}
+.tab .c{font-family:var(--mono);font-size:11px;color:var(--faint)}
+/* cópia ativa recortada por clip-path: a cor muda junto com o recorte, sem dois estados sobrepostos */
+.tabs-active{position:absolute;inset:4px;display:flex;gap:4px;pointer-events:none;clip-path:inset(0 100% 0 0 round 999px)}
+.tabs-active.ready{transition:clip-path 260ms var(--ease-out)}
+.tabs-active .tab{background:var(--ink);color:var(--paper)}
+.tabs-active .tab .c{color:rgba(245,244,240,.55)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{position:relative;display:flex;flex-direction:column;min-height:200px;padding:24px 26px;background:var(--card);border-radius:20px;box-shadow:0 0 0 1px var(--line);
+  transition:transform 160ms var(--ease-out),box-shadow 250ms ease}
+.card:active{transform:scale(.985)}
+.card[hidden]{display:none}
+.card-code{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+.card h3{font-size:21px;letter-spacing:-.025em;line-height:1.2;max-width:22ch}
+.card p{font-size:14.5px;color:var(--muted);margin-top:8px;flex:1}
+.card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:16px;border-top:1px solid var(--line)}
+.card .pr{font-size:20px;font-weight:500;letter-spacing:-.03em}
+.card .pr.c{font-family:var(--serif);font-style:italic;font-weight:400;font-size:19px;letter-spacing:0;color:var(--ink-2)}
+.card .go{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;box-shadow:inset 0 0 0 1px var(--line-2);transition:background-color 200ms ease,color 200ms ease,box-shadow 200ms ease}
+.card .go svg{width:15px;height:15px;transition:transform 200ms var(--ease-out)}
+.card.cta{background:transparent;box-shadow:inset 0 0 0 1px var(--line-2)}
+.card.cta h3 em{color:var(--blue)}
+@media (hover:hover) and (pointer:fine){
+  .card:hover{box-shadow:0 0 0 1px var(--line-2),0 20px 40px -28px rgba(11,18,48,.35)}
+  .card:hover .go{background:var(--wa);color:#fff;box-shadow:none}
+  .card:hover .go svg{transform:translateX(2px)}
+}
+
+/* ATPV-e */
+.atpv{background:var(--ink);color:var(--paper);position:relative;overflow:hidden}
+.atpv::before{content:"";position:absolute;width:900px;height:900px;right:-300px;top:-400px;border-radius:50%;background:radial-gradient(circle,rgba(88,184,238,.20),transparent 62%);pointer-events:none}
+.atpv .sec-idx{color:rgba(245,244,240,.55);margin-bottom:22px}
+.atpv .sec-idx b{color:var(--paper)}
+.atpv .mono{color:rgba(245,244,240,.55)}
+.atpv-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:var(--gutter);align-items:center}
+.atpv h2{font-size:clamp(34px,4vw,58px);line-height:.98;letter-spacing:-.045em}
+.atpv h2 em{color:var(--sky)}
+.atpv p{color:rgba(245,244,240,.7);font-size:17px;max-width:440px;margin:24px 0 32px}
+.atpv-price{display:flex;align-items:baseline;gap:12px;margin-bottom:28px}
+.atpv-price b{font-size:48px;font-weight:500;letter-spacing:-.05em}
+/* documento que se preenche */
+.doc{background:#fbfaf7;color:var(--ink);border-radius:14px;padding:24px 24px 20px;transform:rotate(-2.5deg);box-shadow:0 50px 90px -30px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.06);position:relative}
+.doc-h{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:14px;border-bottom:1.5px solid var(--ink)}
+.doc-h b{font-size:15px;font-weight:600;letter-spacing:-.01em}
+.doc .mono{color:var(--muted);font-size:10.5px}
+.doc-row{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px dashed var(--line-2)}
+.doc-v{font-family:var(--mono);font-size:14px;color:var(--blue);letter-spacing:.02em}
+.js .doc-v{clip-path:inset(0 100% 0 0);transition:clip-path 520ms var(--ease-out);transition-delay:var(--d)}
+.js .doc.in .doc-v{clip-path:inset(0 0 0 0)}
+.stamp{position:absolute;right:18px;bottom:34px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.14em;color:var(--wa);padding:8px 12px;border:1.5px solid currentColor;border-radius:8px;transform:rotate(-8deg);background:rgba(251,250,247,.7)}
+.js .stamp{opacity:0;transform:rotate(-14deg) scale(1.3);transition:opacity 180ms ease 900ms,transform 380ms var(--ease-out) 900ms}
+.js .doc.in .stamp{opacity:1;transform:rotate(-8deg) scale(1)}
+.doc-sig{margin-top:26px;display:flex;justify-content:space-between;align-items:end}
+.doc-sig i{display:block;width:120px;height:1px;background:var(--ink);margin-bottom:6px}
+
+/* passos */
+.steps{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gutter)}
+.track{position:absolute;left:5px;right:calc((100% - 2 * var(--gutter)) / 3 - 5px);top:5px;height:1px;background:var(--line-2)}
+.track i{position:absolute;inset:0;background:var(--ink);transform-origin:left;transform:scaleX(0);transition:transform 1400ms var(--ease-in-out)}
+.steps.in .track i,.no-motion .track i{transform:none}
+.step{position:relative;padding-top:40px}
+.step .dot{position:absolute;top:0;left:0;width:11px;height:11px;border-radius:50%;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line-2);transition:background-color 240ms ease var(--d),box-shadow 240ms ease var(--d)}
+.steps.in .step .dot{background:var(--blue);box-shadow:0 0 0 4px rgba(31,69,208,.14)}
+.step .mono{display:block;margin-bottom:14px}
+.step h3{font-size:clamp(24px,2.2vw,30px);letter-spacing:-.03em;margin-bottom:12px}
+.step p{color:var(--ink-2);font-size:15.5px;max-width:300px}
+.js .step .txt{opacity:0;transform:translateY(10px);transition:opacity 600ms var(--ease-out) var(--d),transform 700ms var(--ease-out) var(--d)}
+.js .steps.in .step .txt{opacity:1;transform:none}
+
+/* contato */
+.contact-card{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:8px;padding:8px;border-radius:26px;background:var(--card);box-shadow:0 0 0 1px var(--line)}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tile{display:flex;flex-direction:column;justify-content:space-between;gap:30px;padding:22px;border-radius:18px;background:var(--paper);transition:transform 160ms var(--ease-out),background-color 200ms ease}
+.tile:active{transform:scale(.985)}
+.tile-top{display:flex;justify-content:space-between;align-items:center}
+.tile-top svg.go{width:15px;height:15px;color:var(--faint);transition:transform 200ms var(--ease-out),color 200ms ease}
+.tile-ico{width:38px;height:38px;border-radius:11px;background:var(--card);display:grid;place-items:center;color:var(--blue)}
+.tile-ico svg{width:19px;height:19px}
+.tile.wa .tile-ico{color:var(--wa)}
+.tile strong{display:block;font-weight:500;font-size:17px;letter-spacing:-.02em;line-height:1.3;margin-top:6px}
+.tile span.s{font-size:13.5px;color:var(--muted)}
+@media (hover:hover) and (pointer:fine){.tile:hover{background:var(--paper-2)}.tile:hover svg.go{color:var(--ink);transform:translate(2px,-2px)}}
+.map{position:relative;border-radius:18px;overflow:hidden;min-height:320px;background:var(--paper-2)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* final + rodapé */
+.final{background:var(--ink);color:var(--paper);position:relative;overflow:hidden;padding-top:clamp(72px,8vw,112px)}
+.final h2{font-size:clamp(40px,5vw,72px);line-height:.96;letter-spacing:-.045em;max-width:13ch}
+.final h2 em{color:var(--sky)}
+.final-row{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:var(--gutter);align-items:center}
+.final p{color:rgba(245,244,240,.7);font-size:16px;max-width:340px;margin-bottom:20px}
+.final .ctas{display:flex;flex-direction:column;gap:8px;align-items:stretch;max-width:340px}
+.final .btn{height:50px}
+.final .btn-ghost{color:var(--paper);box-shadow:inset 0 0 0 1px rgba(245,244,240,.25)}
+@media (hover:hover) and (pointer:fine){.final .btn-ghost:hover{box-shadow:inset 0 0 0 1px var(--paper)}}
+footer{margin-top:clamp(56px,6vw,88px);border-top:1px solid rgba(245,244,240,.14);padding:28px 0 40px;font-size:13.5px;color:rgba(245,244,240,.6)}
+.foot-row{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.foot-row nav a{color:rgba(245,244,240,.7);padding:6px 10px}
+@media (hover:hover) and (pointer:fine){.foot-row nav a:hover{background:rgba(245,244,240,.08);color:var(--paper)}}
+.final .legal{font-size:12px;color:rgba(245,244,240,.4);margin:18px 0 0;max-width:760px}
+
+/* whatsapp flutuante */
+.wa-fab{position:fixed;right:24px;bottom:24px;z-index:50;width:56px;height:56px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(31,170,89,.7);
+  opacity:0;transform:translateY(12px) scale(.96);pointer-events:none;transition:opacity 200ms var(--ease-out),transform 260ms var(--ease-out)}
+.wa-fab.show{opacity:1;transform:none;pointer-events:auto}
+.wa-fab:active{transform:scale(.95)}
+.wa-fab svg{width:27px;height:27px}
+.mbar{display:none}
+
+/* ============ responsivo ============ */
+@media (max-width:1080px){
+  nav.main{display:none}
+  .hero-grid{grid-template-columns:1fr;align-items:start}
+  .ficha{max-width:560px}
+  .atpv-grid{grid-template-columns:1fr}
+  .doc{grid-column:1/-1;max-width:460px;justify-self:center;width:100%}
+  .final-row{grid-template-columns:1fr;row-gap:40px}
+}
+@media (max-width:820px){
+  .sec-head{grid-template-columns:1fr;row-gap:18px}
+  .sec-head .sub{justify-self:start;padding-bottom:0}
+  .facts{grid-template-columns:1fr 1fr}
+  .fact:nth-child(2){border-right:0}
+  .fact:nth-child(3){padding-left:0}
+  .fact:nth-child(n+3){border-top:1px solid var(--line)}
+  .atpv-grid{grid-template-columns:1fr}
+  .contact-card{grid-template-columns:1fr}
+  .map{min-height:240px}
+}
+@media (max-width:640px){
+  header .wrap{height:62px}
+  header .btn{display:none}
+  .brand-mark{width:32px;height:32px}
+  .brand-word b{font-size:18px}
+  .hero h1{font-size:clamp(46px,13.4vw,64px)}
+  .hero .ctas .btn{width:100%}
+  .ficha-body{padding:4px 16px 16px}
+  .fact{padding:18px 12px 20px 0}
+  .fact+.fact{padding-left:14px}
+  .fact:nth-child(3){padding-left:0}
+  .cards{grid-template-columns:1fr;gap:10px}
+  .card{min-height:0;padding:20px}
+  .card-code{margin-bottom:18px}
+  .tabs{margin:0 calc(var(--gutter) * -1) 16px;padding:0 var(--gutter)}
+  .tabs-inner{width:max-content}
+  .tab{flex:none;height:40px}
+  .steps{grid-template-columns:1fr;gap:36px;padding-left:28px}
+  .track{left:5px;right:auto;top:5px;bottom:auto;height:calc(100% - var(--last,120px));width:1px}
+  .track i{transform-origin:top;transform:scaleY(0)}
+  .steps.in .track i{transform:none}
+  .step{padding-top:0}
+  .step .dot{left:-28px;top:4px}
+  .tiles{grid-template-columns:1fr}
+  .tile{flex-direction:row;justify-content:flex-start;align-items:center;gap:14px;padding:16px}
+  .tile>div:last-child{flex:1;min-width:0}
+  .tile-top svg.go{display:none}
+  .final .ctas{max-width:none}
+  footer{padding-bottom:96px}
+  .wa-fab{display:none}
+  .mbar{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:50;gap:8px;padding:7px;border-radius:999px;background:rgba(245,244,240,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 0 0 1px var(--line),0 16px 32px -12px rgba(11,18,48,.3);
+    transform:translateY(calc(100% + 24px));transition:transform 400ms var(--ease-drawer)}
+  .mbar.show{transform:none}
+  .mbar .btn{height:46px;font-size:15px}
+  .mbar .btn-wa{flex:1}
+  .mbar .btn-call{width:46px;padding:0;background:var(--card);color:var(--ink)}
+}
+
+/* movimento reduzido: menos e mais suave, não zero. Some o deslocamento, fica a opacidade */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .w>span{transform:none;transition:none}
+  .js [data-r],.js .step .txt{transform:none;transition:opacity 300ms ease;transition-delay:0ms}
+  .js .doc-v{clip-path:none;transition:none}
+  .js .stamp{transform:rotate(-8deg);transition:opacity 300ms ease}
+  .track i{transition:none}
+  .step .dot{transition-delay:0ms}
+  .card,.btn,.chip,.tab,.tile{transition-property:background-color,color,box-shadow}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="g-mark" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#5cc6f2"/>
+      <stop offset=".55" stop-color="#2f78cf"/>
+      <stop offset="1" stop-color="#1b3f9e"/>
+    </linearGradient>
+  </defs>
+  <symbol id="mark" viewBox="0 0 64 64">
+    <circle cx="35" cy="9.5" r="7.5" fill="url(#g-mark)"/>
+    <path fill="url(#g-mark)" fill-rule="evenodd" d="M30.6 21.2c-3.3-2.6-7.8-3-11.6-.9-6.3 3.4-9.7 12-8.3 21 1 6.4 4.6 11.7 9.6 13.4 3.6 1.2 7.2.2 9.9-2.3l.9 3.4c.8 3 3.7 4.9 6.8 4.5 6.9-.9 13.2-6.2 14.9-13.5 1.5-6.5-1.6-12.8-7.2-14.6-3.2-1-6.5-.4-9.1 1.3l-1.6-6.2c-.8-3.2-3.1-5.4-5.3-6.1zm-5.1 6.5c2.8-.4 5 2.5 5.6 6.4l1.5 9.6c-.6 4.3-2.6 8-5.4 8.6-3.2.7-6.3-3.2-6.9-8.8-.8-7.5 1.8-15.3 5.2-15.8zm14.4 14.1c1.8-2.3 4.4-3.5 6.6-2.7 3 1.1 4 5.2 2.3 9.2-1.4 3.4-4.4 5.7-7.1 5.7-.8 0-1.5-.6-1.7-1.4z"/>
+  </symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.24-9.43 9.44-9.43a9.38 9.38 0 0 1 9.43 9.44c0 5.2-4.23 9.43-9.44 9.43m8.03-17.46A11.27 11.27 0 0 0 12.05.72C5.8.72.7 5.8.7 12.06c0 2 .52 3.95 1.52 5.67L.6 23.6l6.01-1.58a11.3 11.3 0 0 0 5.43 1.38h.01c6.25 0 11.34-5.09 11.35-11.34 0-3.03-1.18-5.88-3.32-8.02"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+</svg>
+
+<header id="hdr">
+  <div class="wrap">
+    <a href="#topo" class="brand" aria-label="Despachante Idealize, início">
+      <svg class="brand-mark" aria-hidden="true"><use href="#mark"/></svg>
+      <span class="brand-word"><small>DESPACHANTE</small><b>IDEALIZE</b></span>
+    </a>
+    <nav class="main" aria-label="Principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#atpve">ATPV-e</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn btn-ink" data-wa="Olá! Vim pelo site e gostaria de um orçamento." href="#"><svg><use href="#i-wa"/></svg>Fale conosco</a>
+  </div>
+</header>
+
+<main id="topo">
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow mono" data-r="deco" style="--d:0ms"><i></i>Despachante credenciado · Suzano, SP</div>
+        <h1 data-split>Transferir seu veículo pode ser <em>simples.</em></h1>
+        <p class="lead" data-r style="--d:380ms">Transferência, licenciamento, ATPV-e, placas e regularização. A gente cuida da burocracia do seu carro ou moto com preço justo e atendimento de perto.</p>
+        <div class="ctas" data-r style="--d:470ms;--y:10px">
+          <a class="btn btn-ink" data-wa="Olá! Vim pelo site e gostaria de um orçamento." href="#"><svg><use href="#i-wa"/></svg>Pedir orçamento</a>
+          <a class="link" href="#servicos">Ver todos os serviços <svg><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+
+      <div class="ficha" id="orcamento" data-r style="--d:300ms;--y:24px">
+        <div class="ficha-h"><span class="mono">Ficha de orçamento</span><span class="mono num">Nº 0038</span></div>
+        <div class="ficha-body">
+          <div class="field">
+            <span class="mono">01</span>
+            <div>
+              <div class="mono field-l">Do que você precisa?</div>
+              <div class="chips" role="group" aria-label="Escolha o serviço">
+                <button class="chip" aria-pressed="true" data-name="Transferência ou 2ª via" data-price="420" data-msg="fazer a transferência/2ª via do meu veículo">Transferência</button>
+                <button class="chip" aria-pressed="false" data-name="Preenchimento de ATPV-e" data-price="50" data-msg="preencher/emitir o ATPV-e">ATPV-e</button>
+                <button class="chip" aria-pressed="false" data-name="Licenciamento" data-price="50" data-msg="fazer o licenciamento e imprimir o documento">Licenciamento</button>
+                <button class="chip" aria-pressed="false" data-name="Placas e emplacamento" data-msg="resolver placas/emplacamento">Placas</button>
+                <button class="chip" aria-pressed="false" data-name="Modificação veicular" data-msg="regularizar uma modificação no veículo">Modificação</button>
+                <button class="chip" aria-pressed="false" data-name="Regularização de débitos" data-msg="regularizar débitos do veículo">Débitos</button>
+                <button class="chip" aria-pressed="false" data-name="Outro serviço" data-other="1">Outro</button>
+              </div>
+            </div>
+          </div>
+          <div class="field" aria-live="polite">
+            <span class="mono">02</span>
+            <div>
+              <div class="q-name" id="qName">Transferência ou 2ª via</div>
+              <span class="q-val num" id="qVal"><small>R$</small>420</span>
+              <div class="q-note" id="qNote">Valor do serviço · parcele em até 21x*</div>
+            </div>
+          </div>
+          <a class="btn btn-wa" id="qBtn" href="#" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Continuar no WhatsApp<svg class="arr"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="ficha-f">Sem compromisso. Você fala direto com o despachante.</div>
+      </div>
+    </div>
+
+    <div class="facts" data-r="deco" style="--d:620ms">
+      <div class="fact"><span class="mono">Transferência</span><b class="num">R$ 420</b><span>em todo o estado de SP</span></div>
+      <div class="fact"><span class="mono">ATPV-e</span><b class="num">R$ 50</b><span>preenchido por nós</span></div>
+      <div class="fact"><span class="mono">Licenciamento</span><b class="num">R$ 50</b><span>com o CRLV impresso</span></div>
+      <div class="fact"><span class="mono">Parcelamento</span><b class="num">21x</b><span>no cartão de crédito*</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="section" id="servicos">
+  <div class="wrap">
+    <div class="sec-head" data-group>
+      <div class="sec-idx mono" data-r="deco"><b>01</b> Serviços</div>
+      <div>
+        <h2 data-split>Tudo o que o seu veículo <em>precisa.</em></h2>
+        <p class="sub" data-r style="--d:260ms">16 serviços em 5 categorias. Os que não têm preço fixo a gente avalia caso a caso.</p>
+      </div>
+    </div>
+    <div class="svc-grid">
+      <div data-group>
+        <div class="tabs" data-r="deco">
+          <div class="tabs-inner" id="tabs" role="tablist" aria-label="Categorias">
+            <button class="tab" role="tab" aria-selected="true" data-cat="doc">Documentação <span class="c">04</span></button>
+            <button class="tab" role="tab" aria-selected="false" data-cat="reg">Registro e placas <span class="c">04</span></button>
+            <button class="tab" role="tab" aria-selected="false" data-cat="mot">Motor e chassi <span class="c">03</span></button>
+            <button class="tab" role="tab" aria-selected="false" data-cat="mod">Modificação <span class="c">04</span></button>
+            <button class="tab" role="tab" aria-selected="false" data-cat="deb">Regularização <span class="c">01</span></button>
+          </div>
+        </div>
+        <div class="cards" id="cards" data-r style="--d:120ms;--y:18px">
+          <a class="card" data-cat="doc" data-wa="Olá! Preciso de ajuda com o preenchimento/emissão do ATPV-e." href="#"><div class="card-code mono"><span>DOC · 01</span></div><h3>Preenchimento e emissão de ATPV-e</h3><p>A autorização digital para transferir o veículo, preenchida por nós.</p><div class="card-foot"><span class="pr num">R$ 50</span><span class="go"><svg><use href="#i-arrow"/></svg></span></div></a>
+          <a class="card" data-cat="doc" data-wa="Olá! Quero fazer o licenciamento e imprimir o documento do meu veículo." href="#"><div class="card-code mono"><span>DOC · 02</span></div><h3>Licenciamento e impressão do documento</h3><p>Veículo em dia e com o CRLV na mão.</p><div class="card-foot"><span class="pr num">R$ 50</span><span class="go"><svg><use href="#i-arrow"/></svg></span></div></a>
+          <a class="card" data-cat="doc" data-wa="Olá! Quero fazer a transferência/2ª via do meu veículo." href="#"><div class="card-code mono"><span>DOC · 03</span></div><h3>Transferência ou 2ª via</h3><p>Transferência de propriedade ou segunda via do documento, em todo o estado de SP.</p><div class="card-foot"><span class="pr num">R$ 420</span><span class="go"><svg><use href="#i-arrow"/></svg></span></div></a>
+          <a class="card" data-cat="doc" data-wa="Olá! Preciso de uma transferência por óbito (inventário)." href="#"><div class="card-code mono"><span>DOC · 04</span></div><h3>Transferência por óbito</h3><p>Transferência de veículo em processo de inventário.</p><div class="card-foot"><span class="pr c">Sob consulta</span><span class="go"><svg><use href="#i-arrow"/></svg></span></div></a>
+          <a class="card" data-cat="reg" data-wa="Olá! Preciso fazer o primeiro emplacamento de um 0 km." href="#"><div class="card-code mono"><span>REG · 01</span></div><h3>Primeiro emplacamento 0 km</h3><p>Registro e placas do seu veículo novo.</p><div class="card-foot"><span class="pr c">Sob consulta</span><span class="go"><svg><use href="#i-arrow"/></svg></span></div></a>
+          <a class="card" data-cat="reg" data-wa="Olá! Preciso fazer o primeiro registro do veículo em São Paulo." href="#"><div class="card-code mono"><span>REG · 02</span></div><h3>Primeiro registro em São Paulo</h3><p>Para veículos que vêm de outro estado.</p><div class="card-foot"><span class="pr c">Sob consulta</span><span class="go"><svg><use href="#i-arrow"/></svg></span></div></a>
+          <a class="card" data-cat="reg" data-wa="Olá! Preciso de segunda via de placa ou terceira placa." href="#"><div class="card-code mono"><span>REG · 03</span></div><h3>2ª via de placa ou 3ª placa</h3><p>Placa perdida ou danificada, ou placa extra para suporte e reboque.</p><div class="card-foot"><span class="pr c">Sob consulta</span><span class="go"><svg><use href="#i-arrow"/></svg></span></div></a>
+          <a class="card" data-cat="reg" data-wa="Olá! Preciso fazer cadastro/inclusão na ANTT." href="#"><div class="card-code mono"><span>REG · 04</span></div><h3>Cadastro e inclusão na ANTT</h3><p>Para quem trabalha com transporte de cargas.</p><div class="card-foot"><span class="pr c">Sob consulta</span><span class="go"><svg><use href="#i-arrow"/></svg></span></div></a>
+          <a class="card" data-cat="mot" data-wa="Olá! Preciso fazer o cadastro de motor." href="#"><div class="card-code mono"><span>MOT · 01</span></div><h3>Cadastro de motor</h3><p>Registro de motor novo ou substituído no documento.</p><div class="card-foot"><span class="pr c">Sob consulta</span><span class="go"><svg><use href="#i-arrow"/></svg></span></div></a>
+          <a class="card" data-cat="mot" data-wa="Olá! Preciso de remarcação de chassi/motor." href="#"><div class="card-code mono"><span>MOT · 02</span></div><h3>Remarcação de chassi ou motor</h3><p>Numeração ilegível ou danificada, regularizada.</p><div class="card-foot"><span class="pr c">Sob consulta</span><span class="go"><svg><use href="#i-arrow"/></svg></span></div></a>
+          <a class="card" data-cat="mot" data-wa="Olá! Preciso de recuperação de sinistro." href="#"><div class="card-code mono"><span>MOT · 03</span></div><h3>Recuperação de sinistro</h3><p>Volta do veículo recuperado à circulação.</p><div class="card-foot"><span class="pr c">Sob consulta</span><span class="go"><svg><use href="#i-arrow"/></svg></span></div></a>
+          <a class="card" data-cat="mod" data-wa="Olá! Quero regularizar instalação/retirada de GNV." href="#"><div class="card-code mono"><span>MOD · 01</span></div><h3>Instalação ou retirada de GNV</h3><p>Inclusão ou retirada do kit gás no documento.</p><div class="card-foot"><span class="pr c">Sob consulta</span><span class="go"><svg><use href="#i-arrow"/></svg></span></div></a>
+          <a class="card" data-cat="mod" data-wa="Olá! Quero legalizar roda, pneu e suspensão." href="#"><div class="card-code mono"><span>MOD · 02</span></div><h3>Rodas, pneus e suspensão</h3><p>Legalização das alterações no seu veículo.</p><div class="card-foot"><span class="pr c">Sob consulta</span><span class="go"><svg><use href="#i-arrow"/></svg></span></div></a>
+          <a class="card" data-cat="mod" data-wa="Olá! Quero fazer a troca de cor do veículo." href="#"><div class="card-code mono"><span>MOD · 03</span></div><h3>Troca de cor</h3><p>A nova cor atualizada no documento.</p><div class="card-foot"><span class="pr c">Sob consulta</span><span class="go"><svg><use href="#i-arrow"/></svg></span></div></a>
+          <a class="card" data-cat="mod" data-wa="Olá! Quero trocar a espécie do veículo para colecionador." href="#"><div class="card-code mono"><span>MOD · 04</span></div><h3>Troca de espécie para colecionador</h3><p>Para veículos antigos que vão para a categoria coleção.</p><div class="card-foot"><span class="pr c">Sob consulta</span><span class="go"><svg><use href="#i-arrow"/></svg></span></div></a>
+          <a class="card" data-cat="deb" data-wa="Olá! Preciso regularizar débitos do meu veículo." href="#"><div class="card-code mono"><span>DEB · 01</span></div><h3>Regularização de débitos</h3><p>Pendências que impedem licenciar ou transferir.</p><div class="card-foot"><span class="pr c">Sob consulta</span><span class="go"><svg><use href="#i-arrow"/></svg></span></div></a>
+          <a class="card cta" data-wa="Olá! Tenho uma dúvida sobre um serviço para o meu veículo." href="#"><div class="card-code mono"><span>Outros</span></div><h3>Não encontrou o seu <em>caso?</em></h3><p>Atendemos outros serviços veiculares. Conta pra gente o que você precisa.</p><div class="card-foot"><span class="pr c">Fale com a gente</span><span class="go"><svg><use href="#i-arrow"/></svg></span></div></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ATPV-e -->
+<section class="section atpv" id="atpve">
+  <div class="wrap">
+    <div class="atpv-grid" data-group>
+      <div>
+        <div class="sec-idx mono" data-r="deco"><b>02</b> ATPV-e</div>
+        <h2 data-split>Travou no ATPV-e? <em>Nós preenchemos para você.</em></h2>
+        <p data-r style="--d:300ms">Comprou ou vendeu um veículo e não consegue acessar ou preencher a autorização de transferência? A gente resolve rapidinho.</p>
+        <div data-r style="--d:380ms;--y:10px">
+          <div class="atpv-price"><b class="num">R$ 50</b><span class="mono">Preenchimento e emissão</span></div>
+          <a class="btn btn-paper" data-wa="Olá! Preciso de ajuda com o ATPV-e." href="#"><svg style="color:var(--wa)"><use href="#i-wa"/></svg>Vamos fazer?<svg class="arr"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+      <div class="doc" id="doc" aria-hidden="true">
+        <div class="doc-h"><b>ATPV-e</b><span class="mono">Autorização de transferência</span></div>
+        <div class="doc-row"><span class="mono">Placa</span><span class="doc-v" style="--d:250ms">ABC1D23</span></div>
+        <div class="doc-row"><span class="mono">Renavam</span><span class="doc-v" style="--d:390ms">0123 4567 890</span></div>
+        <div class="doc-row"><span class="mono">Vendedor</span><span class="doc-v" style="--d:510ms">Maria S. Oliveira</span></div>
+        <div class="doc-row"><span class="mono">Comprador</span><span class="doc-v" style="--d:610ms">João P. Santos</span></div>
+        <div class="doc-row"><span class="mono">Valor</span><span class="doc-v" style="--d:690ms">R$ 32.000,00</span></div>
+        <div class="doc-sig"><div><i></i><span class="mono">Assinatura</span></div></div>
+        <span class="stamp">Preenchido</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="section" id="como-funciona">
+  <div class="wrap">
+    <div class="sec-head" data-group>
+      <div class="sec-idx mono" data-r="deco"><b>03</b> Como funciona</div>
+      <div>
+        <h2 data-split>Três passos, <em>zero fila.</em></h2>
+        <p class="sub" data-r style="--d:240ms">Você não precisa entender de Detran. É pra isso que a gente existe.</p>
+      </div>
+    </div>
+    <div class="steps" id="steps">
+      <div class="track" aria-hidden="true"><i></i></div>
+      <!-- os atrasos acompanham a linha passando por cada ponto -->
+      <div class="step" style="--d:0ms"><span class="dot"></span><div class="txt"><span class="mono">Passo 01</span><h3>Chame no WhatsApp</h3><p>Conte o que você precisa e receba o orçamento, sem compromisso.</p></div></div>
+      <div class="step" style="--d:620ms"><span class="dot"></span><div class="txt"><span class="mono">Passo 02</span><h3>Envie os documentos</h3><p>A gente diz exatamente o que separar, sem ida e volta.</p></div></div>
+      <div class="step" style="--d:840ms"><span class="dot"></span><div class="txt"><span class="mono">Passo 03</span><h3>Pronto</h3><p>Cuidamos de todo o processo e avisamos quando estiver tudo resolvido.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="section" id="contato" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head" data-group>
+      <div class="sec-idx mono" data-r="deco"><b>04</b> Contato</div>
+      <div>
+        <h2 data-split>Estamos na Vila Costa, <em>em Suzano.</em></h2>
+      </div>
+    </div>
+    <div class="contact-card" data-group>
+      <div class="tiles" data-r style="--y:18px">
+        <a class="tile" href="https://www.google.com/maps/search/?api=1&query=Rua+Dr.+Deodato+Wertheimer,+38,+Vila+Costa,+Suzano+-+SP" target="_blank" rel="noopener">
+          <div class="tile-top"><span class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><svg class="go"><use href="#i-out"/></svg></div>
+          <div><span class="mono">Endereço</span><strong>Rua Dr. Deodato Wertheimer, 38</strong><span class="s">Vila Costa, Suzano - SP · Ver rota</span></div>
+        </a>
+        <a class="tile wa" data-wa="Olá! Vim pelo site e gostaria de um orçamento." href="#">
+          <div class="tile-top"><span class="tile-ico"><svg><use href="#i-wa"/></svg></span><svg class="go"><use href="#i-out"/></svg></div>
+          <div><span class="mono">WhatsApp</span><strong class="num">(11) 97069-6871</strong><span class="s">Orçamentos e dúvidas</span></div>
+        </a>
+        <a class="tile" href="tel:+551142853017">
+          <div class="tile-top"><span class="tile-ico"><svg><use href="#i-phone"/></svg></span><svg class="go"><use href="#i-out"/></svg></div>
+          <div><span class="mono">Telefone</span><strong class="num">(11) 4285-3017</strong><span class="s">Ligue para o escritório</span></div>
+        </a>
+        <a class="tile" href="https://www.instagram.com/despachanteidealize/" target="_blank" rel="noopener">
+          <div class="tile-top"><span class="tile-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></span><svg class="go"><use href="#i-out"/></svg></div>
+          <div><span class="mono">Instagram</span><strong>@despachanteidealize</strong><span class="s">Novidades e dicas</span></div>
+        </a>
+      </div>
+      <div class="map" data-r="deco" style="--d:120ms">
+        <iframe title="Mapa: Despachante Idealize, Rua Dr. Deodato Wertheimer, 38, Suzano" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=Rua%20Dr.%20Deodato%20Wertheimer%2C%2038%2C%20Vila%20Costa%2C%20Suzano%20-%20SP&z=16&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL + RODAPÉ -->
+<section class="final">
+  <div class="wrap">
+    <div class="final-row" data-group>
+      <h2 data-split>Deixa a burocracia <em>com a gente.</em></h2>
+      <div data-r style="--d:300ms">
+        <p>Mande uma mensagem e receba seu orçamento, sem compromisso.</p>
+        <div class="ctas">
+          <a class="btn btn-wa" data-wa="Olá! Vim pelo site e gostaria de um orçamento." href="#"><svg><use href="#i-wa"/></svg><span class="num">(11) 97069-6871</span></a>
+          <a class="btn btn-ghost" href="tel:+551142853017"><svg><use href="#i-phone"/></svg><span class="num">(11) 4285-3017</span></a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="foot-row">
+        <a href="#topo" class="brand on-ink" aria-label="Despachante Idealize, voltar ao topo">
+          <svg class="brand-mark" aria-hidden="true"><use href="#mark"/></svg>
+          <span class="brand-word"><small>DESPACHANTE</small><b>IDEALIZE</b></span>
+        </a>
+        <span>Despachante credenciado · Rua Dr. Deodato Wertheimer, 38, Vila Costa, Suzano - SP</span>
+        <nav aria-label="Redes">
+          <a href="https://www.instagram.com/despachanteidealize/" target="_blank" rel="noopener">Instagram</a>
+          <a data-wa="Olá! Vim pelo site." href="#">WhatsApp</a>
+        </nav>
+      </div>
+      <p class="legal">*Parcelamento no cartão de crédito sujeito às condições da operadora. Valores referentes ao serviço do despachante; taxas do Detran, quando houver, são informadas no orçamento.</p>
+    </footer>
+  </div>
+</section>
+
+</main>
+
+<a class="wa-fab" id="fab" data-wa="Olá! Vim pelo site e gostaria de um orçamento." href="#" aria-label="Falar no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+<div class="mbar" id="mbar">
+  <a class="btn btn-wa" data-wa="Olá! Vim pelo site e gostaria de um orçamento." href="#"><svg><use href="#i-wa"/></svg>Pedir orçamento</a>
+  <a class="btn btn-call" href="tel:+551142853017" aria-label="Ligar"><svg><use href="#i-phone"/></svg></a>
+</div>
+
+<script>
+const WA = '5511970696871';
+const waLink = msg => 'https://wa.me/' + WA + '?text=' + encodeURIComponent(msg);
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const EASE_OUT = 'cubic-bezier(.23,1,.32,1)';
+
+document.querySelectorAll('[data-wa]').forEach(a => {
+  a.href = waLink(a.dataset.wa); a.target = '_blank'; a.rel = 'noopener';
+});
+
+/* ---------- títulos: cada palavra sobe de dentro de uma máscara ----------
+   Atrasos que encolhem (70, 62, 54... ms), pra ler como onda, não como metrônomo. */
+function splitWords(root){
+  let i = 0, t = 0;
+  const walk = node => {
+    [...node.childNodes].forEach(n => {
+      if (n.nodeType === 3){
+        const frag = document.createDocumentFragment();
+        n.textContent.split(/(\s+)/).forEach(part => {
+          if (!part) return;
+          if (/^\s+$/.test(part)){ frag.append(part); return; }
+          const w = document.createElement('span'); w.className = 'w';
+          const s = document.createElement('span'); s.textContent = part;
+          s.style.setProperty('--d', Math.round(t) + 'ms');
+          t += Math.max(26, 70 - i * 8); i++;
+          w.append(s); frag.append(w);
+        });
+        n.replaceWith(frag);
+      } else if (n.nodeType === 1) walk(n);
+    });
+  };
+  root.setAttribute('aria-label', root.textContent.trim());
+  walk(root);
+}
+document.querySelectorAll('[data-split]').forEach(splitWords);
+
+/* ---------- entradas: uma por bloco, disparam uma vez ---------- */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+}), {rootMargin:'0px 0px -12% 0px'});
+document.querySelectorAll('[data-group], #doc, #steps').forEach(el => io.observe(el));
+
+// o hero entra assim que as fontes carregam, pra a máscara não medir a fonte errada
+const heroIn = () => document.getElementById('hero').classList.add('in');
+(document.fonts && document.fonts.ready ? Promise.race([document.fonts.ready, new Promise(r => setTimeout(r, 900))]) : Promise.resolve()).then(() => requestAnimationFrame(heroIn));
+setTimeout(heroIn, 1400); // garantia: o hero nunca fica invisível se o rAF atrasar (aba em segundo plano)
+
+/* ---------- troca com blur: some subindo, volta subindo ----------
+   Interrompível: um clique novo cancela o anterior e só o último valor entra. */
+function swap(el, apply, {dist = '30%', out = 110, inn = 220} = {}){
+  if (reduce){ apply(); return; }
+  el.getAnimations().forEach(a => a.cancel());
+  el._apply = apply;
+  const a = el.animate([{opacity:1, transform:'none', filter:'blur(0)'}, {opacity:0, transform:`translateY(-${dist})`, filter:'blur(2px)'}], {duration:out, easing:EASE_OUT, fill:'forwards'});
+  a.onfinish = () => {
+    el._apply(); a.cancel();
+    el.animate([{opacity:0, transform:`translateY(${dist})`, filter:'blur(2px)'}, {opacity:1, transform:'none', filter:'blur(0)'}], {duration:inn, easing:EASE_OUT});
+  };
+}
+
+/* ---------- ficha de orçamento ---------- */
+const chips = document.querySelectorAll('.chip');
+const qName = document.getElementById('qName'), qVal = document.getElementById('qVal'),
+      qNote = document.getElementById('qNote'), qBtn = document.getElementById('qBtn');
+function pick(c, animate){
+  chips.forEach(x => x.setAttribute('aria-pressed', x === c));
+  const render = () => {
+    qName.textContent = c.dataset.name;
+    if (c.dataset.price){
+      qVal.className = 'q-val num'; qVal.innerHTML = '<small>R$</small>' + c.dataset.price;
+      qNote.textContent = 'Valor do serviço · parcele em até 21x*';
+    } else if (c.dataset.other){
+      qVal.className = 'q-val word'; qVal.textContent = 'Conte pra gente';
+      qNote.textContent = 'Diga o que você precisa e a gente te orienta e passa o valor.';
+    } else {
+      qVal.className = 'q-val word'; qVal.textContent = 'Sob consulta';
+      qNote.textContent = 'Cada caso é avaliado. A gente te passa o valor na hora.';
+    }
+  };
+  animate ? swap(qVal, render) : render();
+  qBtn.href = waLink(c.dataset.other
+    ? 'Olá! Vim pelo site e preciso de ajuda com um serviço para o meu veículo: '
+    : 'Olá! Vim pelo site e quero ' + c.dataset.msg + '. Pode me passar um orçamento?');
+}
+chips.forEach(c => c.addEventListener('click', () => { if (c.getAttribute('aria-pressed') !== 'true') pick(c, true); }));
+pick(chips[0], false);
+
+/* ---------- abas: cópia ativa recortada por clip-path ---------- */
+const tabsInner = document.getElementById('tabs');
+const baseTabs = [...tabsInner.querySelectorAll('.tab')];
+const overlay = document.createElement('div');
+overlay.className = 'tabs-active'; overlay.setAttribute('aria-hidden', 'true');
+baseTabs.forEach(t => { const c = t.cloneNode(true); c.removeAttribute('role'); c.removeAttribute('aria-selected'); c.tabIndex = -1; overlay.append(c); });
+tabsInner.append(overlay);
+let activeTab = baseTabs[0];
+function clipTo(t){
+  const L = t.offsetLeft - 4, W = t.offsetWidth, T = overlay.offsetWidth;
+  overlay.style.clipPath = `inset(0 ${T - L - W}px 0 ${L}px round 999px)`;
+}
+const cardsEl = document.getElementById('cards');
+const cardList = [...cardsEl.querySelectorAll('.card[data-cat]')], ctaCard = cardsEl.querySelector('.card.cta');
+function showCat(cat){
+  let n = 0;
+  cardList.forEach(c => { c.hidden = c.dataset.cat !== cat; if (!c.hidden) n++; });
+  ctaCard.hidden = n % 2 === 0;   // o card "não encontrou" fecha a grade quando a conta é ímpar
+}
+baseTabs.forEach(t => t.addEventListener('click', () => {
+  if (t === activeTab) return;
+  activeTab = t;
+  baseTabs.forEach(x => x.setAttribute('aria-selected', x === t));
+  clipTo(t);
+  t.scrollIntoView({block:'nearest', inline:'nearest', behavior: reduce ? 'auto' : 'smooth'});
+  swap(cardsEl, () => showCat(t.dataset.cat), {dist:'8px', out:100, inn:240});
+}));
+showCat('doc'); clipTo(activeTab);
+requestAnimationFrame(() => overlay.classList.add('ready'));
+addEventListener('resize', () => clipTo(activeTab));
+document.fonts && document.fonts.ready.then(() => clipTo(activeTab));
+
+/* ---------- linha vertical dos passos (celular) termina no último ponto ---------- */
+const stepsEl = document.getElementById('steps');
+const setLast = () => stepsEl.style.setProperty('--last', (stepsEl.lastElementChild.offsetHeight - 5) + 'px');
+setLast(); addEventListener('resize', setLast);
+
+/* ---------- header e botões flutuantes ---------- */
+const hdr = document.getElementById('hdr'), fab = document.getElementById('fab'), mbar = document.getElementById('mbar');
+const onScroll = () => {
+  const y = scrollY;
+  hdr.classList.toggle('scrolled', y > 8);
+  fab.classList.toggle('show', y > 700);
+  mbar.classList.toggle('show', y > 520);
+};
+addEventListener('scroll', onScroll, {passive:true}); onScroll();
+</script>
+</body>
+</html>

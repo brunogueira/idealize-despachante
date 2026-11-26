@@ -1,0 +1,8 @@
+# gerados pelo build.sh
+dist/
+idealize-site.zip
+# sistema
+.DS_Store
+._*
+# referências do Instagram (ficam só no computador)
+assets/ref/

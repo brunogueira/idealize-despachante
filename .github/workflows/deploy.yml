@@ -1,0 +1,42 @@
+name: Deploy na HostGator
+
+# Roda a cada push na main (e manualmente pela aba Actions).
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Gerar dist
+        run: sh build.sh
+
+      # Só publica quando os segredos de FTP estiverem cadastrados no GitHub
+      # (Settings > Secrets and variables > Actions): FTP_SERVER, FTP_USERNAME, FTP_PASSWORD
+      # e, opcional, FTP_DIR (padrão: public_html/).
+      - name: Enviar por FTPS
+        if: env.FTP_SERVER != ''
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./dist/
+          server-dir: ${{ secrets.FTP_DIR || 'public_html/' }}
+
+      - name: Aviso
+        if: env.FTP_SERVER == ''
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        run: echo "::warning::Segredos de FTP ainda não cadastrados; o build rodou, mas nada foi enviado."
