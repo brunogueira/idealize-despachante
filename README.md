@@ -3,17 +3,10 @@
 Página única (HTML + CSS + JS, sem dependências) do Despachante Idealize, Suzano/SP.
 
 - `index.html`: a página inteira
-- `assets/`: logo em SVG, imagem de prévia (og.png) e ícone; `assets/ref/` são só referências, não vão pro ar
-- `build.sh`: gera `dist/` (o que é publicado) e `idealize-site.zip`
+- `assets/`: logo em SVG, imagem de prévia (og.png) e ícone
+- `build.sh`: gera `dist/` e `idealize-site.zip` caso precise subir manualmente
 
-## Publicação automática
+## Publicação
 
-Todo push na `main` roda `.github/workflows/deploy.yml`: gera a `dist/` e envia por FTPS para a HostGator.
-Cadastre em **Settings > Secrets and variables > Actions**:
-
-| Segredo | Exemplo |
-| --- | --- |
-| `FTP_SERVER` | `ftp.seudominio.com.br` |
-| `FTP_USERNAME` | usuário de FTP do cPanel |
-| `FTP_PASSWORD` | senha desse usuário |
-| `FTP_DIR` (opcional) | `public_html/` |
+O site é servido pelo **GitHub Pages** direto da raiz da branch `main`: todo push na `main` vai pro ar em cerca de 1 minuto.
+O DNS do domínio fica na HostGator, apontando para o GitHub Pages.
